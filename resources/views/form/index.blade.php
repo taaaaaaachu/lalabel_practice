@@ -18,7 +18,7 @@
 {{-- ▲▲ エラーメッセージ　--}}
 
 {{-- ▼▼ フォーム --}}
-<form action="{{ route('form') }}" method="POST">
+<form action="{{ route('form.confirm') }}" method="POST">
   @csrf
 
   {{-- ▼ 会社名 --}}
@@ -77,7 +77,7 @@
 
   {{-- ▼ 送信ボタン --}}
   <div>
-    <button type="submit">送信</button>
+    <button type="submit" name="submitBtnVal" value="confirm">確認画面へ</button>
   </div>
 
 </form>
