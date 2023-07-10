@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FormController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// お問合せフォーム
+Route::get('/form', [FormController::class, 'index'])->name('form');
+Route::get('/form/complete', [FormController::class, 'complete'])->name('form.complete');
