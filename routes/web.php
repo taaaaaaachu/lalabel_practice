@@ -21,3 +21,6 @@ Route::get('/', function () {
 // お問合せフォーム
 Route::get('/form', [FormController::class, 'index'])->name('form');
 Route::get('/form/complete', [FormController::class, 'complete'])->name('form.complete');
+
+// postされた際に送信処理を実行するようにする
+Route::post('/form', [FormController::class, 'sendMail']);
